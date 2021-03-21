@@ -16,13 +16,11 @@ $ rsync --archive --chown faasusr:faasusr .ssh /home/openfaas
 ```
 
 4. Install K3S.
-
 ```
 $ curl -sfL https://get.k3s.io | sh -
 ```
 
 5. Configure K3S
-
 ```
 $ cd ~
 $ mkdir .kube
@@ -31,13 +29,11 @@ $ export KUBECONFIG=$HOME/.kube/config
 ```
 
 6. Install Arkade
-
 ```
 $ sudo curl -SLsf https://dl.get-arkade.dev/ | sudo sh
 ```
 
 7. Install OpenFaas.
-
 ```
 $ arkade install openfaas --load-balancer
 ```
@@ -55,3 +51,33 @@ $ curl -SLsf https://cli.openfaas.com | sudo sh
 # for windows
 $ https://github.com/openfaas/faas-cli/releases/download/0.13.9/faas-cli.exe
 ```
+
+## To list and pull templates
+
+1. List oficial templates
+```
+faas-cli template store list
+```
+2. List custom store templates.
+```
+faas-cli template store list --url https://raw.githubusercontent.com/mzck5y/ofaas-templates/master/templates.json
+```
+
+3. Pull custom templates
+```
+faas-cli template store pull netcore50-function --url https://raw.githubusercontent.com/mzck5y/ofaas-templates/master/templates.json
+```
+
+4. To creae a function
+```
+faas-cli new send-welcome-email --lang netcore50-function --prefix mzck5y
+```
+
+
+
+
+
+
+
+
+### Happy Codding.
