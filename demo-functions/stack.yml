@@ -1,0 +1,15 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://gw.mivaro.net
+functions:
+  send-notification-wb:
+    lang: node14
+    handler: ./send-notification-wb
+    image: mzck5y/send-notification-wb:latest
+
+  send-notification2-wb:
+    lang: netcore50-function
+    handler: ./send-notification2-wb
+    image: mzck5y/send-notification2-wb:latest
+
