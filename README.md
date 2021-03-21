@@ -1,5 +1,14 @@
 ## How to install openfaas in an ubuntu virtual server.
 
+#### Digital Ocean Refeal Link
+Use the following link to get 100 credit from Digital Ocean. If you use this refeal some credit will be added to my account
+
+```
+https://m.do.co/c/c5f51307a8a2
+```
+
+#### Install Server Requirenemtns
+
 1. Create a non root user,
 ```
 $ adduser faasusr
@@ -32,6 +41,8 @@ $ export KUBECONFIG=$HOME/.kube/config
 ```
 $ sudo curl -SLsf https://dl.get-arkade.dev/ | sudo sh
 ```
+
+#### Install and Configure OpenFaas
 
 7. Install OpenFaas.
 ```
