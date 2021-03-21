@@ -16,19 +16,17 @@ $ rsync --archive --chown faasusr:faasusr .ssh /home/openfaas
 ```
 
 4. Install K3S.
+
 ```
 $ curl -sfL https://get.k3s.io | sh -
 ```
 
 5. Configure K3S
+
 ```
 $ cd ~
 $ mkdir .kube
-```
-```
 $ sudo rsync --archive --chown openfaas:openfaas /etc/rancher/k3s/k3s.yaml ~/.kube/config
-```
-```
 $ export KUBECONFIG=$HOME/.kube/config
 ```
 
