@@ -79,12 +79,12 @@ faas-cli template store list --url https://your.server.net/templates.json
 
 3. Pull custom templates
 ```
-faas-cli template store pull netcore50-function --url https://your.server.net/master/templates.json
+faas-cli template store pull <<template-name>> --url https://your.server.net/templates.json
 ```
 
 4. To creae a function
 ```
-faas-cli new <<func-name>> --lang <<template-name>> --prefix mzck5y
+faas-cli new <<func-name>> --lang <<template-name>> --prefix <<your-container-register-username>>
 ```
 
-##### Happy Codding.
+##### Happy Codding !!!
