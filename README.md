@@ -31,10 +31,11 @@ $ curl -sfL https://get.k3s.io | sh -
 
 5. Configure K3S
 ```
-$ cd ~
-$ mkdir .kube
-$ sudo rsync --archive --chown openfaas:openfaas /etc/rancher/k3s/k3s.yaml ~/.kube/config
-$ export KUBECONFIG=$HOME/.kube/config
+cd ~
+mkdir .kube
+sudo rsync --archive --chown openfaas:openfaas /etc/rancher/k3s/k3s.yaml ~/.kube/config
+export KUBECONFIG=$HOME/.kube/config
+export KUBE_EDITOR=nano
 ```
 
 6. Install Arkade
